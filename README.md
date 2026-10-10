@@ -1,714 +1,286 @@
-# AI-Workout and Diet Plan - Web Application
+# Loopwear – AI-Powered Sustainable Clothing Exchange Marketplace
 
-An integrated, web-based fitness and nutrition platform that leverages **Machine Learning, physical metabolic calculations (BMI, BMR, TDEE), and sports science** to deliver tailored workout routines and diet charts.
+**A Full-Stack Circular Fashion Platform with Direct 1-to-1 Barter, Real-Time Negotiation Chat, and Multi-Pillar Generative AI.**
 
----
-
-## 🌟 Key Features
-
-### 1. User Authentication & Profiles
-
-* Secure account registration with hashed passwords using Werkzeug.
-* Login using username or email.
-* Session-based authentication.
-* Detailed profile management including:
-
-  * Age
-  * Gender
-  * Height
-  * Weight
-  * Target Weight
-  * Fitness Goal
-  * Activity Level
-  * Exercise Frequency
-  * Dietary Preference
-  * Health Considerations
-* Automatic profile validation.
-* Personalized recommendations are regenerated when the fitness profile is updated.
+*Prepared for Unified Mentor Project Evaluation*  
+*Developer: Thrashwi Naik*  
+*Repository: [thrashwi/Loopwear-AI-Powered-Sustainable-Clothing-Exchange-Marketplace](https://github.com/thrashwi/Loopwear-AI-Powered-Sustainable-Clothing-Exchange-Marketplace)*
 
 ---
 
-### 2. Accurate BMI & Metabolic Assessment
+## 🌟 Executive Summary & Concept
 
-* Instant metric BMI calculation:
+Fast fashion leads to excessive garment disposal, textile waste, and environmental depletion. Millions of wearable, high-quality clothes sit idle in closets simply because consumers lack a convenient, equitable channel for circular exchange.
 
-  **BMI = Weight (kg) / Height (m)²**
-
-* BMI category classification:
-
-  * Underweight
-  * Normal Weight
-  * Overweight
-  * Obesity Class I
-  * Obesity Class II
-  * Obesity Class III
-
-* Ideal healthy weight range calculation.
-
-* BMR calculation using the **Mifflin-St Jeor formula**.
-
-* TDEE calculation based on activity level.
-
-* Target calorie calculation.
-
-* Protein, carbohydrate, and fat target calculation.
-
-* Water intake recommendation.
+**Loopwear** is an AI-powered sustainable clothing marketplace dedicated entirely to **cashless barter exchanges**. Users list pre-loved garments, discover nearby wardrobes, evaluate trade fairness using artificial intelligence, negotiate terms via real-time Socket.IO chat, and complete direct swaps—diverting garments from landfills while cutting carbon and water footprints.
 
 ---
 
-### 3. AI & Machine Learning Recommendation Engine
+## 🏗️ Technology Stack
 
-The project contains an AI/ML recommendation engine in `ml_engine.py`.
-
-* Random Forest classifiers and regressors using Scikit-Learn.
-* Fitness parameters are used to support personalized recommendations.
-* Recommendation processing considers user-specific fitness characteristics.
-* Generates personalized workout and diet plans.
-
-#### 7-Day Workout Routine
-
-The system can generate workout schedules such as:
-
-* Push/Pull/Legs
-* Upper/Lower
-* Full Body
-* Fat-Loss HIIT
-
-Workout recommendations can contain:
-
-* Exercise names
-* Target muscles
-* Sets
-* Repetitions
-* Rest periods
-* Coaching cues
-* Demonstration video links
-
-#### 7-Day Nutrition Plan
-
-The system generates nutrition recommendations based on the user's profile and dietary preference.
-
-Supported diet preferences include:
-
-* Standard Omnivore
-* Vegetarian
-* Vegan
-* Keto
-* High-Protein
-
-The plan can include:
-
-* Breakfast
-* Morning Boost
-* Lunch
-* Pre/Post Workout Snack
-* Dinner
-* Calories
-* Protein
-* Carbohydrates
-* Fat targets
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React 18, Vite, Tailwind CSS, React Router v6, Lucide React, Socket.IO Client |
+| **Backend** | Node.js, Express.js, Socket.IO, Multer, Bcryptjs, JSONWebToken, CORS |
+| **Database** | Persistent Storage Engine with dual MongoDB (Mongoose) + Atomic JSON Store (`store.json`) |
+| **AI Integration** | Google Gemini 1.5 Flash API + Built-in Smart Heuristic Fallback Engine (Zero-Key Demo Ready) |
+| **Testing** | Automated End-to-End Test Suite (`server/test-suite.js` - 20 passing test specs) |
 
 ---
 
-### 4. Curated Fitness & Cooking Video Library
+## 📱 Complete Application Pages
 
-FitAI provides a dedicated video library containing curated fitness and cooking tutorials.
+Loopwear provides an interconnected web application with multi-page routing and quick overlay modals:
 
-#### Exercise Videos
+1. **Page 1: Landing Page (`/`)**
+   - Hero section: *"Swap Wardrobes, Not Cash."*
+   - Interactive 3-step lifecycle breakdown (List, Match with AI, Swap & Save).
+   - Live featured clothing catalog spotlight.
+   - Three pillars of AI technology explanation.
+   - Environmental savings counters and direct CTA navigation.
 
-Examples include:
+2. **Page 2: Login Page (`/login`)**
+   - Professional credential authentication (Email/Username + Password).
+   - Show/hide password toggle and Remember-Me persistence.
+   - Server-enforced bcrypt verification and JWT generation.
+   - One-Click Quick Demo Persona autofill buttons for rapid evaluator testing.
 
-* Squats
-* Bench Press
-* Deadlifts
-* Push-ups
-* HIIT
-* Abs/Core exercises
+3. **Page 3: Registration Page (`/register`)**
+   - Form fields: Full name, username, email, location/city, password, confirm password, and terms checkbox.
+   - Client and server-side validation, duplicate rejection, and password strength requirements.
+   - Automatic account activation and redirect.
 
-#### Cooking & Nutrition Videos
+4. **Page 4: User Dashboard (`/dashboard`)**
+   - Live authorized metrics: Active listings, incoming offers, outgoing offers, pending requests, completed swaps.
+   - Real-time personal sustainability score (kg of CO₂ avoided, liters of water saved, garments diverted).
+   - My Wardrobe quick management cards.
+   - Recent swap proposals with instant accept/reject/manage actions.
+   - Recent messages preview.
+   - Location-aware recommended and nearby clothing discoveries.
 
-Examples include:
+5. **Page 5: Clothing Listings Page (`/listings`)**
+   - Responsive card layout with image, brand, title, size, condition, estimated barter value, location, and owner info.
+   - Live keyword search across titles, brands, and tags.
+   - Multi-criteria filter drawer: Category, Size, Condition, Brand, City / Locality.
+   - Sorting by Newest, Oldest, Price (Low to High), Price (High to Low).
+   - Dedicated "View Details" and "Propose Swap" actions.
 
-* High-protein meal preparation
-* Healthy breakfast preparation
-* Overnight oats
-* Tofu stir-fry
-* Recovery smoothie bowls
+6. **Page 6: Clothing Item Details Page (`/listings/:id`)**
+   - Multi-photo gallery preview with status badges (`available`, `reserved`, `swapped`).
+   - Garment attributes breakdown (Size, Category, Condition, Color, Brand).
+   - AI estimated barter valuation badge.
+   - Owner profile card with rating, completed swaps, and location.
+   - Garment environmental impact card.
+   - Propose Barter Swap button, Start Conversation button, and Report Listing modal.
+   - "More from this wardrobe" catalog showcase.
 
-The video library includes:
+7. **Page 7: Create Listing (`/create-listing`) & My Wardrobe (`/my-listings`)**
+   - Form for publishing pre-loved garments with image URL or local file upload via Multer.
+   - **Feature A Integration:** *Generate with AI* button synthesizes title, description, and suggested valuation.
+   - **Feature D Integration:** *Scan Photo with AI* auto-classifies category, brand, and color.
+   - My Wardrobe view allows owners to toggle item availability, edit details, or permanently delete listings.
 
-* Video thumbnails
-* Video titles
-* Descriptions
-* Categories
-* Difficulty levels
-* Duration
-* Watch Now functionality
-* Responsive video modal player
+8. **Page 8: Swap Requests & Management (`/swaps`)**
+   - Full exchange lifecycle state machine: `pending` ➔ `counteroffered` ➔ `accepted` ➔ `completed` / `rejected` / `cancelled`.
+   - Incoming Offers, Outgoing Proposals, and Completed History tabs.
+   - Visual comparison: Offered items (single or multi-item bundle) vs Requested item.
+   - Embedded AI Fair Swap Evaluator card (Fairness verdict, score, value difference, negotiation advice).
+   - Recipient actions: Accept (atomically reserves items to prevent conflicting swaps), Decline, Counteroffer.
+   - Requester actions: Cancel pending offer.
+   - Exchange completion: Participants mark complete to finalize exchange and increment personal and platform sustainability scores.
 
----
+9. **Page 9: Negotiation Chat (`/chat` & `/chat/:conversationId`)**
+   - Dual-pane layout: Conversation list on the left, active chat room on the right.
+   - Real-time delivery with Socket.IO room subscriptions.
+   - Active swap context banner showing offered items and current status.
+   - **Feature C Integration:** AI Negotiation Assistant panel suggests tailored counteroffer and logistics phrasing chips; clicking any chip inserts it directly into the composer.
 
-### 5. External Internet Video Search
+10. **Page 10: User Profile & History (`/profile`)**
+    - Profile editor for display name, city/location, and avatar.
+    - Lifetime sustainability achievements (Carbon offset, water preserved, garments diverted).
+    - Chronological completed swaps history.
+    - Secure session logout.
 
-FitAI is not limited to the videos stored inside the project.
-
-If a user does not find a suitable video in the curated FitAI video library, the application provides an **Internet Video Search** option.
-
-Users can search for any video they want, for example:
-
-* Yoga for beginners
-* Chest workout
-* Home workout
-* Weight loss exercise
-* High-protein breakfast
-* Healthy dinner recipes
-
-The search redirects the user's query to **YouTube's internet search results** in a new browser tab.
-
-This allows users to discover additional videos beyond the predefined FitAI video collection.
-
-> **Note:** The current implementation uses YouTube's search page directly and does not require a YouTube API key.
-
----
-
-### 6. Nearby Gym & Fitness Locator
-
-* Interactive **Leaflet.js** map.
-* OpenStreetMap tiles.
-* Browser geolocation support.
-* "Near Me" functionality.
-* Radius visualization.
-* Nearby gym cards.
-* Gym ratings.
-* Gym addresses.
-* Distance calculation in kilometers.
-* Driving directions.
-* Personal favorite/bookmark functionality.
-
----
-
-### 7. Progress Tracking & Interactive Charts
-
-Users can record and monitor their fitness progress.
-
-Progress tracking can include:
-
-* Daily weight
-* Workout completion
-* Calories burned
-* Water intake
-* Chest measurement
-* Waist measurement
-* Hip measurement
-
-Interactive visualizations use **Chart.js**.
-
-The system provides charts such as:
-
-* Weight vs Goal trajectory
-* BMI history
-
-The dashboard also includes a quick water logger such as:
-
-**+250 ml**
-
-for convenient hydration tracking.
+11. **Page 11: Admin Portal (`/admin`)**
+    - Server-enforced role-based access control (`role === 'admin'`).
+    - Platform-wide analytics: Registered users, marketplace garments, completed swaps, total emissions prevented.
+    - User Management: View users and suspend or reactivate accounts.
+    - Content Moderation: View and remove inappropriate listings.
+    - Dispute & Reports Management: Review community-submitted reports and mark them resolved or dismissed.
+    - Administrative audit log timeline.
 
 ---
 
-### 8. Fitness & Meal Reminder Module
+## 🤖 5 Core AI Features
 
-FitAI provides customizable fitness and nutrition reminders.
+Loopwear includes multi-pillar AI functionality powered by the Google Gemini API with smart heuristic fallbacks:
 
-Examples include:
+| Feature | Endpoint | Description |
+| :--- | :--- | :--- |
+| **A. AI Listing Description & Valuation** | `POST /api/ai/generate-description` | Generates appealing title, 2–3 sentence styling description, tags, and suggested barter value based on brand, category, condition, and user notes. |
+| **B. AI Fair Swap Evaluator** | `POST /api/ai/evaluate-swap` | Compares requested and offered garment values (including multi-item bundles), computes fairness scores (0–100), and provides parity recommendations. |
+| **C. AI Negotiation Assistant** | `POST /api/ai/suggest-counteroffer` | Produces polite counteroffer proposals, bundle suggestions, and logistics messages that swappers can insert into chat. |
+| **D. AI Photo Scanner** | `POST /api/ai/classify-image` | Scans garment photos to identify probable category, color, silhouette style, and estimated condition. |
+| **E. AI Sustainability Calculator** | `POST /api/ai/sustainability-calc` | Calculates exact freshwater liters saved, CO₂ kilograms avoided, and landfill diversion estimates based on garment material and type. |
 
-* Morning workout reminder
-* Hydration reminder
-* Meal reminder
-* High-protein dinner reminder
-
-The reminder system supports:
-
-* Custom schedules
-* In-app notifications
-* Web Notification API
-* Desktop push notifications
-* Reminder status management
-
-Default reminders can be created for new users.
+> **Zero-Key Demo Fallback:** If `GEMINI_API_KEY` is not provided in `.env`, the application automatically activates its built-in rule-based valuation and description heuristics so that all features remain 100% testable out-of-the-box.
 
 ---
 
-### 9. Dashboard
+## 🔐 Security & Access Control
 
-The FitAI dashboard provides a centralized view of the user's fitness information.
-
-The dashboard can display:
-
-* Current weight
-* Target weight
-* BMI
-* BMI category
-* BMR
-* TDEE
-* Target calories
-* Macronutrients
-* Water intake
-* Today's workout
-* Today's diet plan
-* Progress information
-* Workout streak
-* Active reminders
-
-The dashboard automatically selects the appropriate workout/diet plan for the current day.
+- **Password Security:** Passwords hashed with `bcryptjs` (salt rounds: 10). Plaintext passwords are never stored or logged.
+- **Token-Based Authentication:** Signed JWT tokens with 7-day expiration.
+- **Server-Side Authorization:** Middleware enforces user ownership before listing updates, deletions, or swap cancellations.
+- **Role-Based Access Control (RBAC):** Admin endpoints (`/api/admin/*`) strictly reject non-admin users with `403 Forbidden`.
+- **Item Reservation Guard:** Accepting a swap proposal reserves both garments immediately, preventing race conditions or conflicting accepted trades.
+- **Sanitized Responses:** Sensitive fields like `passwordHash` are stripped before responses leave the backend.
 
 ---
 
-### 10. Recipes & Nutrition Support
+## 👥 Seed Test Accounts
 
-The application supports nutrition-related content through:
+The platform includes pre-seeded accounts configured for immediate local testing:
 
-* Diet recommendations
-* Meal planning
-* Cooking tutorials
-* High-protein meal suggestions
-* Food preference-based recommendations
+| Persona | Email / Identifier | Password | Role | Location |
+| :--- | :--- | :--- | :--- | :--- |
+| **Rahul Sharma** | `rahul@example.com` | `Rahul@123` | User | Indiranagar, Bengaluru |
+| **Ananya Verma** | `ananya@example.com` | `Ananya@123` | User | Koramangala, Bengaluru |
+| **Priya Patel** | `priya@example.com` | `Priya@123` | User | Bandra, Mumbai |
+| **Administrator** | `admin@loopwear.com` | `Admin@12345` | Admin | Bengaluru, India |
 
-The recipe/cooking content complements the personalized diet plan.
-
----
-
-### 11. Export & Print
-
-FitAI provides a dedicated print-optimized recommendation page.
-
-The `/recommendations/print` route can be used to generate a clean printable version of:
-
-* Workout plan
-* Diet plan
-* Fitness information
-* Nutrition information
-
-This can be used for physical printing or browser-based PDF generation.
+*(Evaluators can also use the **Quick Demo Persona Switcher** dropdown in the navigation bar to switch between user perspectives with a single click).*
 
 ---
 
-## 🛠️ Technology Stack
+## 🚀 Local Setup & Execution Guide
 
-### Backend
+### 1. Prerequisites
+- **Node.js** v18 or higher (v20+ recommended)
+- **npm** v9 or higher
 
-* Python 3
-* Flask
+### 2. Installation
+From the root workspace directory, install dependencies for all modules:
 
-### Database
+```bash
+# Install root monorepo tools
+npm install
 
-* SQLite3
-* Foreign keys
-* Cascading relationships
+# Install server dependencies
+cd server
+npm install
 
-### Machine Learning & Analytics
+# Install client dependencies
+cd ../client
+npm install
+cd ..
+```
 
-* Scikit-Learn
-* Pandas
-* NumPy
-* Joblib
+### 3. Environment Setup
+Create environment files from the provided examples:
 
-### Frontend
+```bash
+# Server environment
+cp server/.env.example server/.env
 
-* HTML5
-* CSS3
-* JavaScript ES6
-* Jinja2 Templates
-* Responsive UI
-* Modern dark theme
+# Client environment
+cp client/.env.example client/.env
+```
 
-### Mapping
+### 4. Running the Development Application
+Start both the Backend API and Frontend Vite client simultaneously:
 
-* Leaflet.js
-* OpenStreetMap
+**Using root npm script:**
+```bash
+npm run dev
+```
 
-### Data Visualization
+**Or using Windows scripts:**
+- Double-click `start-dev.bat` or run `.\start-dev.ps1` in PowerShell.
 
-* Chart.js
-
-### Icons & Typography
-
-* FontAwesome 6
-* Google Fonts / Inter
-
-### External Video Search
-
-* YouTube web search
-
-### Testing
-
-* Pytest
+- **Frontend:** `http://localhost:5173`
+- **Backend API:** `http://localhost:5000`
 
 ---
 
-## 📁 Directory Structure
+## 🧪 Automated Test Suite Execution
 
+Loopwear includes an automated end-to-end integration test suite covering authentication, listing CRUD, swap lifecycle, chat messaging, admin RBAC, and all AI endpoints.
+
+Run the test suite:
+
+```bash
+# From the root directory:
+npm test
+
+# Or directly in the server directory:
+cd server
+npm test
+```
+
+### Test Suite Output Verification:
 ```text
-D:\DIET PLAN\
+🧪 Starting Loopwear End-to-End Automated Test Suite...
 
-├── app.py                  # Main Flask application entry point & routes
-├── config.py               # Application configuration
-├── database.py             # Database connection, schemas, and queries
-├── ml_engine.py            # ML recommendation models and fitness calculations
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-├── test_app.py             # Automated unit and integration tests
+  ✅ PASS: Health check API returns 200 OK
+  ✅ PASS: User registration with bcrypt hashing returns 201 and token
+  ✅ PASS: Duplicate registration is rejected with 400 Bad Request
+  ✅ PASS: Login with valid credentials succeeds and returns JWT
+  ✅ PASS: Login with invalid password rejected with 401 Unauthorized
+  ✅ PASS: GET /api/auth/me identifies authenticated user correctly
+  ✅ PASS: GET /api/items filters by category correctly
+  ✅ PASS: POST /api/items creates listing associated with current user
+  ✅ PASS: Unauthorized user cannot delete another users listing
+  ✅ PASS: GET /api/dashboard returns authorized live metrics
+  ✅ PASS: System prevents user proposing a swap on their own listing
+  ✅ PASS: POST /api/swaps initiates swap proposal and AI evaluation
+  ✅ PASS: POST /api/swaps/:id/accept reserves items and marks accepted
+  ✅ PASS: POST /api/swaps/:id/complete marks swap completed and awards sustainability metrics
+  ✅ PASS: POST /api/chat/:id/messages persists and returns message
+  ✅ PASS: Regular users cannot access administrative endpoints (RBAC enforced)
+  ✅ PASS: Admin can access analytics and user management
+  ✅ PASS: AI Clothing Description generator produces title, description and tags
+  ✅ PASS: AI Fair Swap Evaluator produces valuation comparison and fairness score
+  ✅ PASS: AI Sustainability Calculator computes water, CO2 and landfill savings
 
-├── static/
-│   ├── css/
-│   │   └── style.css       # Fitness UI stylesheet and print styles
-│   │
-│   └── js/
-│       ├── main.js         # Video modal, mobile navigation, BMI calculator
-│       ├── tracker.js      # Progress tracking and Chart.js charts
-│       ├── map.js          # Leaflet.js gym search and geolocation
-│       └── reminders.js    # Notifications and reminder schedules
-
-└── templates/
-    ├── base.html           # Base navigation layout and footer
-    ├── index.html          # Landing page and quick BMI tool
-    ├── login.html          # Login screen
-    ├── register.html       # Registration screen
-    ├── profile.html        # Profile and fitness metrics editor
-    ├── dashboard.html      # User dashboard and daily plan
-    ├── recommendations.html# AI workout and diet recommendations
-    ├── print_plan.html     # Print/PDF-ready fitness blueprint
-    ├── videos.html         # Curated videos + Internet video search
-    ├── gym_search.html     # Interactive nearby gym finder
-    ├── progress.html       # Progress tracker and charts
-    └── reminders.html      # Reminder management and alerts
+========================================
+TEST SUMMARY: 20 Passed, 0 Failed
+========================================
 ```
 
 ---
 
-## 🔄 Application Workflow
+## ☁️ Deployment Configuration
 
-The overall FitAI workflow is:
+### Frontend (e.g., Vercel / Netlify)
+1. Build command: `npm run build`
+2. Output directory: `dist`
+3. Root directory: `client`
+4. Set environment variable: `VITE_API_BASE_URL=https://your-backend-service.onrender.com/api`
 
-```text
-User
-  ↓
-Registration
-  ↓
-Login
-  ↓
-User Profile
-  ↓
-Fitness Data Collection
-  ↓
-Data Validation & Processing
-  ↓
-BMI Calculation
-  ↓
-BMR Calculation
-  ↓
-TDEE Calculation
-  ↓
-Target Calories & Macronutrients
-  ↓
-AI / ML Recommendation Engine
-  ↓
-Personalized Workout Plan
-  +
-Personalized Diet Plan
-  ↓
-Dashboard
-  ↓
- ┌─────────────────────────────────────┐
- │ Workout Plan                        │
- │ Diet Plan                           │
- │ Progress Tracking                   │
- │ Fitness & Cooking Videos            │
- │ Internet Video Search               │
- │ Recipes                             │
- │ Gym Search                          │
- │ Reminders                           │
- │ Print / Export                      │
- └─────────────────────────────────────┘
-```
+### Backend (e.g., Render / Railway)
+1. Build command: `npm install`
+2. Start command: `node index.js`
+3. Root directory: `server`
+4. Set environment variables:
+   - `PORT=5000`
+   - `JWT_SECRET=your_production_jwt_secret`
+   - `CLIENT_URL=https://your-loopwear-client.vercel.app`
+   - `MONGODB_URI=mongodb+srv://...` (Optional; persistent JSON store works automatically)
+   - `GEMINI_API_KEY=your_gemini_api_key` (Optional; smart heuristics run if omitted)
 
 ---
 
-## 🤖 AI / ML Processing
+## 🌿 Environmental Impact Assumptions
 
-The recommendation engine uses fitness-related user information as input.
-
-### Input Features
-
-* Age
-* Gender
-* Height
-* Weight
-* Target Weight
-* BMI
-* Fitness Goal
-* Activity Level
-* Exercise Frequency
-* Dietary Preference
-
-### Processing
-
-```text
-User Fitness Data
-       ↓
-Data Validation
-       ↓
-BMI / BMR / TDEE
-       ↓
-Fitness Parameter Processing
-       ↓
-ML Recommendation Engine
-       ↓
-Workout Recommendation
-       +
-Diet Recommendation
-```
-
-### Output
-
-The system produces:
-
-* Workout split
-* Workout intensity
-* Exercises
-* Sets
-* Repetitions
-* Rest periods
-* Calorie target
-* Protein target
-* Carbohydrate target
-* Fat target
-* Meal plan
-* Water intake
+Calculations in the Sustainability Engine are based on textile lifecycle research:
+- **Carbon Offset:** Average of **3.5 kg CO₂e** saved per exchanged garment (up to 7.5 kg for outerwear).
+- **Water Conservation:** Average of **1,800 Liters** of freshwater dyeing/processing wastewater avoided per garment (up to 3,800L for heavy denim/jackets).
+- **Landfill Diversion:** ~**450 grams** of textile mass diverted from municipal waste per garment swapped.
 
 ---
 
-## 🗄️ Database
+## 📜 License & Acknowledgments
 
-The application uses SQLite3 for persistent data storage.
-
-The database stores information related to:
-
-### Users
-
-Account and authentication information.
-
-### User Profiles
-
-Fitness and personal profile information.
-
-### Recommendations
-
-Generated workout and diet plans.
-
-### Progress Logs
-
-Daily fitness progress and measurements.
-
-### Reminders
-
-Workout, hydration, and meal reminders.
-
-Foreign keys and cascading relationships are used to maintain database integrity.
-
----
-
-## 🔐 Security
-
-The application includes several security mechanisms:
-
-* Password hashing using Werkzeug.
-* Session-based authentication.
-* Protected routes.
-* Login-required decorators.
-* User-specific data access.
-* Registration validation.
-* Duplicate username/email checking.
-* Password confirmation and minimum-length validation.
-
----
-
-## 🚀 How to Run the Application
-
-### 1. Open the Project Folder
-
-```bash
-cd "D:\DIET PLAN"
-```
-
-### 2. Create a Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### 3. Activate the Virtual Environment
-
-#### Windows PowerShell
-
-```powershell
-venv\Scripts\Activate.ps1
-```
-
-#### Windows Command Prompt
-
-```cmd
-venv\Scripts\activate.bat
-```
-
-### 4. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Start the Flask Server
-
-```bash
-python app.py
-```
-
-### 6. Open the Application
-
-Navigate to:
-
-```text
-http://127.0.0.1:5000
-```
-
----
-
-## 🧪 Run Automated Tests
-
-Run:
-
-```bash
-pytest test_app.py -v
-```
-
-This executes the automated unit and integration tests available in the project.
-
----
-
-## 📌 Important Project Modules
-
-### `app.py`
-
-Main Flask application containing:
-
-* Authentication routes
-* Registration
-* Login
-* Dashboard
-* Profile management
-* Recommendation routes
-* Video library
-* Progress tracking
-* Reminders
-* Gym search
-* Print/export functionality
-
-### `ml_engine.py`
-
-Contains:
-
-* BMI calculation
-* BMR calculation
-* TDEE calculation
-* Calorie calculations
-* Macronutrient calculations
-* Exercise database
-* Meal database
-* AI/ML recommendation logic
-* Workout plan generation
-* Diet plan generation
-
-### `database.py`
-
-Responsible for:
-
-* Database initialization
-* SQLite connections
-* SQL queries
-* Database operations
-* Data storage
-
-### `videos.html`
-
-Provides:
-
-* Curated FitAI video library
-* Video category filtering
-* Project video search
-* Video modal playback
-* External internet/YouTube video search
-
----
-
-## 🎯 Project Objective
-
-The primary objective of FitAI is to create an intelligent and personalized fitness platform that combines **Artificial Intelligence, Machine Learning, metabolic calculations, nutrition planning, workout recommendations, progress tracking, reminders, fitness videos, and external internet video search** in one web application.
-
-Instead of providing the same generic plan to every user, FitAI processes individual fitness characteristics to provide recommendations that are more relevant to each user's goals and preferences.
-
----
-
-## 🔮 Future Enhancements
-
-Possible future improvements include:
-
-1. Direct YouTube Data API integration.
-2. Displaying external video results inside FitAI.
-3. Larger fitness and nutrition datasets.
-4. Advanced deep-learning recommendation models.
-5. Wearable device integration.
-6. Smartwatch and fitness-band synchronization.
-7. AI-based fitness chatbot improvements.
-8. Voice-controlled fitness assistant.
-9. Mobile Android/iOS application.
-10. Advanced progress prediction.
-11. Larger nutrition and food database.
-12. Personalized AI fitness coaching.
-13. Exercise form detection using computer vision.
-
----
-
-## ⚠️ Disclaimer
-
-FitAI is intended for fitness planning and educational purposes.
-
-The generated workout and nutrition recommendations should not be considered a substitute for professional medical, nutritional, or fitness advice. Users with medical conditions or specific health requirements should consult a qualified professional before following a new exercise or nutrition program.
-
----
-
-## 👨‍💻 Project Summary
-
-**Project:** AI Workout and Diet Plan
-
-**Application:** FitAI
-
-**Type:** Web-Based AI/ML Fitness and Nutrition Platform
-
-**Backend:** Python + Flask
-
-**Database:** SQLite3
-
-**Machine Learning:** Scikit-Learn
-
-**Frontend:** HTML, CSS, JavaScript, Jinja2
-
-**Mapping:** Leaflet.js + OpenStreetMap
-
-**Charts:** Chart.js
-
-**Video Support:** Curated video library + YouTube Internet Search
-
-**Testing:** Pytest
-
-The project combines fitness calculations, machine learning, personalized recommendations, nutrition planning, workout planning, progress monitoring, reminders, video learning, gym discovery, and external video searching into a single fitness management platform.
+Developed by **Thrashwi Naik** for the **Unified Mentor** Internship Program.  
+Dedicated to advancing responsible circular fashion, software engineering excellence, and practical generative AI applications.

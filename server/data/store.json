@@ -1,0 +1,670 @@
+{
+  "users": [
+    {
+      "id": "user_1",
+      "name": "Rahul Sharma",
+      "username": "rahul_s",
+      "email": "rahul@example.com",
+      "passwordHash": "$2b$10$MQoOn.A15RyPakbB/kLOY.CVpks0rTDIGK14YJZZuWgKOYhkyQQYm",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "location": "Indiranagar, Bengaluru",
+      "rating": 4.9,
+      "status": "active",
+      "swapsCompleted": 12,
+      "sustainabilityScore": {
+        "co2KgSaved": 48,
+        "waterLitersSaved": 15400,
+        "garmentsDiverted": 14
+      },
+      "createdAt": "2026-08-15T10:00:00.000Z"
+    },
+    {
+      "id": "user_2",
+      "name": "Ananya Verma",
+      "username": "ananya_v",
+      "email": "ananya@example.com",
+      "passwordHash": "$2b$10$MQoOn.A15RyPakbB/kLOY.qQ5HSMno4lobl7OQveQj/r3.KWeanuy",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "location": "Koramangala, Bengaluru",
+      "rating": 5,
+      "status": "active",
+      "swapsCompleted": 21,
+      "sustainabilityScore": {
+        "co2KgSaved": 90,
+        "waterLitersSaved": 31400,
+        "garmentsDiverted": 25
+      },
+      "createdAt": "2026-08-20T11:30:00.000Z"
+    },
+    {
+      "id": "user_3",
+      "name": "Priya Patel",
+      "username": "priya_p",
+      "email": "priya@example.com",
+      "passwordHash": "$2b$10$MQoOn.A15RyPakbB/kLOY.KDNp2Us9eav76DxK48gkVFpjlv.Q3c2",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "location": "Bandra, Mumbai",
+      "rating": 4.8,
+      "status": "active",
+      "swapsCompleted": 7,
+      "sustainabilityScore": {
+        "co2KgSaved": 28,
+        "waterLitersSaved": 9800,
+        "garmentsDiverted": 8
+      },
+      "createdAt": "2026-09-01T09:15:00.000Z"
+    },
+    {
+      "id": "user_admin",
+      "name": "Loopwear Administrator",
+      "username": "admin",
+      "email": "admin@loopwear.com",
+      "passwordHash": "$2b$10$MQoOn.A15RyPakbB/kLOY.dW6Iz1M7H50W07lOrSpnquqV0ZiGwQK",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+      "location": "Bengaluru, India",
+      "rating": 5,
+      "status": "active",
+      "swapsCompleted": 35,
+      "sustainabilityScore": {
+        "co2KgSaved": 140,
+        "waterLitersSaved": 48000,
+        "garmentsDiverted": 40
+      },
+      "createdAt": "2026-07-01T08:00:00.000Z"
+    },
+    {
+      "id": "user_1791607451441",
+      "name": "Test Swapper",
+      "username": "tester_1791607450813",
+      "email": "tester_1791607450813@example.com",
+      "passwordHash": "$2b$10$LOBPcQAQ7N6uWqea5SPymeD8n8Q0Kqm/iwUzAHmJ8TTnDJLSWt.MS",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "location": "Indiranagar, Bengaluru",
+      "rating": 5,
+      "status": "active",
+      "swapsCompleted": 1,
+      "sustainabilityScore": {
+        "co2KgSaved": 7,
+        "waterLitersSaved": 3600,
+        "garmentsDiverted": 2
+      },
+      "createdAt": "2026-10-10T04:44:11.441Z"
+    },
+    {
+      "id": "user_1791619170372",
+      "name": "Test Swapper",
+      "username": "tester_1791619170124",
+      "email": "tester_1791619170124@example.com",
+      "passwordHash": "$2b$10$lxQuktrWrbm1oOEjLPWbG.zVDddmSm8oTM6awBQQCRWsKrr8ZPVau",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "location": "Indiranagar, Bengaluru",
+      "rating": 5,
+      "status": "active",
+      "swapsCompleted": 0,
+      "sustainabilityScore": {
+        "co2KgSaved": 0,
+        "waterLitersSaved": 0,
+        "garmentsDiverted": 0
+      },
+      "createdAt": "2026-10-10T07:59:30.372Z"
+    },
+    {
+      "id": "user_1791619336844",
+      "name": "Test Swapper",
+      "username": "tester_1791619336728",
+      "email": "tester_1791619336728@example.com",
+      "passwordHash": "$2b$10$FFXbAqUrBERAprmfzAEP3ObyxUukpswaA5kL1Dz8RwPuM4wZeLamW",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "location": "Indiranagar, Bengaluru",
+      "rating": 5,
+      "status": "active",
+      "swapsCompleted": 1,
+      "sustainabilityScore": {
+        "co2KgSaved": 7,
+        "waterLitersSaved": 3600,
+        "garmentsDiverted": 2
+      },
+      "createdAt": "2026-10-10T08:02:16.844Z"
+    },
+    {
+      "id": "user_1791620028308",
+      "name": "thrashwi",
+      "username": "tashu",
+      "email": "thrashwinaik@gmail.com",
+      "passwordHash": "$2b$10$MG5jkH8TCqaYjl9jmHga6.eLQmynJefW6c.FWADaaR28gRsX7PZqa",
+      "role": "user",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "location": "kasaragod,kerala",
+      "rating": 5,
+      "status": "active",
+      "swapsCompleted": 0,
+      "sustainabilityScore": {
+        "co2KgSaved": 0,
+        "waterLitersSaved": 0,
+        "garmentsDiverted": 0
+      },
+      "createdAt": "2026-10-10T08:13:48.308Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_1791620051081",
+      "ownerId": "user_1791620028308",
+      "ownerName": "thrashwi",
+      "ownerAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "title": "Zara Vintage Blue Jackets & Outerwear (Like New)",
+      "brand": "Zara",
+      "category": "Jackets & Outerwear",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Vintage Blue",
+      "estimatedValue": 3150,
+      "description": "Effortlessly stylish Zara jackets & outerwear featuring a flattering silhouette and premium fabric feel. Kept in like new condition with meticulous care. Easily dresses up or down for any casual or semi-formal wardrobe. Additional details: Worn only twice for a campus event. No tears, original hardware intact..",
+      "images": [
+        "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Zara",
+        "Jackets & Outerwear",
+        "SustainableFashion",
+        "LikeNew",
+        "Loopwear"
+      ],
+      "location": "kasaragod,kerala",
+      "status": "available",
+      "createdAt": "2026-10-10T08:14:11.081Z"
+    },
+    {
+      "id": "item_1791619337210",
+      "ownerId": "user_2",
+      "ownerName": "Ananya Verma",
+      "ownerAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "title": "Zara Silk Blouse 1791619337207",
+      "brand": "Zara",
+      "category": "Tops",
+      "size": "S",
+      "condition": "Like New",
+      "color": "Emerald",
+      "estimatedValue": 1800,
+      "description": "Airy silk button-down blouse.",
+      "images": [
+        "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Loopwear",
+        "Zara"
+      ],
+      "location": "Koramangala, Bengaluru",
+      "status": "swapped",
+      "createdAt": "2026-10-10T08:02:17.210Z"
+    },
+    {
+      "id": "item_1791619337081",
+      "ownerId": "user_1791619336844",
+      "ownerName": "Test Swapper",
+      "ownerAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "title": "Vintage Leather Biker Jacket",
+      "brand": "AllSaints",
+      "category": "Jackets & Outerwear",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Black",
+      "estimatedValue": 3500,
+      "description": "Supple lambskin leather jacket with asymmetrical zip.",
+      "images": [
+        "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Loopwear",
+        "AllSaints"
+      ],
+      "location": "Indiranagar, Bengaluru",
+      "status": "swapped",
+      "createdAt": "2026-10-10T08:02:17.081Z"
+    },
+    {
+      "id": "item_1791619170641",
+      "ownerId": "user_1791619170372",
+      "ownerName": "Test Swapper",
+      "ownerAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "title": "Vintage Leather Biker Jacket",
+      "brand": "AllSaints",
+      "category": "Jackets & Outerwear",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Black",
+      "estimatedValue": 3500,
+      "description": "Supple lambskin leather jacket with asymmetrical zip.",
+      "images": [
+        "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Loopwear",
+        "AllSaints"
+      ],
+      "location": "Indiranagar, Bengaluru",
+      "status": "available",
+      "createdAt": "2026-10-10T07:59:30.641Z"
+    },
+    {
+      "id": "item_1791607451779",
+      "ownerId": "user_1791607451441",
+      "ownerName": "Test Swapper",
+      "ownerAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "title": "Vintage Leather Biker Jacket",
+      "brand": "AllSaints",
+      "category": "Jackets & Outerwear",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Black",
+      "estimatedValue": 3500,
+      "description": "Supple lambskin leather jacket with asymmetrical zip.",
+      "images": [
+        "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Loopwear",
+        "AllSaints"
+      ],
+      "location": "Indiranagar, Bengaluru",
+      "status": "swapped",
+      "createdAt": "2026-10-10T04:44:11.779Z"
+    },
+    {
+      "id": "item_1",
+      "ownerId": "user_1",
+      "ownerName": "Rahul Sharma",
+      "ownerAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "title": "Nike Sportswear Club Fleece Pullover Hoodie",
+      "brand": "Nike",
+      "category": "Tops",
+      "size": "L",
+      "condition": "Gently Used",
+      "color": "Heather Grey",
+      "estimatedValue": 1600,
+      "description": "Iconic brushed-back fleece pullover hoodie from Nike. In warm heather grey with minimal wear around the cuffs. Features pouch pocket and adjustable drawstring hood. Perfect for casual layered streetwear.",
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Streetwear",
+        "Nike",
+        "Fleece",
+        "Athleisure",
+        "Autumn"
+      ],
+      "location": "Indiranagar, Bengaluru",
+      "status": "available",
+      "createdAt": "2026-09-28T10:00:00.000Z"
+    },
+    {
+      "id": "item_2",
+      "ownerId": "user_2",
+      "ownerName": "Ananya Verma",
+      "ownerAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "title": "Zara Vintage Wash Denim Trucker Jacket",
+      "brand": "Zara",
+      "category": "Jackets & Outerwear",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Classic Vintage Blue",
+      "estimatedValue": 1750,
+      "description": "Classic Zara denim jacket in premium medium-wash cotton. Features silver metallic buttons, dual chest flap pockets, and relaxed regular fit. Worn twice for a shoot, zero distress or fading flaws.",
+      "images": [
+        "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Denim",
+        "Zara",
+        "Jackets",
+        "Outerwear",
+        "VintageLook"
+      ],
+      "location": "Koramangala, Bengaluru",
+      "status": "swapped",
+      "createdAt": "2026-10-01T14:20:00.000Z"
+    },
+    {
+      "id": "item_3",
+      "ownerId": "user_2",
+      "ownerName": "Ananya Verma",
+      "ownerAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "title": "Levi's 501 Original Fit Straight Leg Jeans",
+      "brand": "Levi's",
+      "category": "Bottoms",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Dark Indigo",
+      "estimatedValue": 2200,
+      "description": "The timeless Levi's 501 signature straight leg denim with iconic button fly. Rigid 100% cotton in dark stonewash. Hem and waist are in pristine state. A closet staple that lasts decades.",
+      "images": [
+        "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Levi's",
+        "501",
+        "Denim",
+        "Classic",
+        "Sustainable"
+      ],
+      "location": "Koramangala, Bengaluru",
+      "status": "available",
+      "createdAt": "2026-10-02T11:00:00.000Z"
+    },
+    {
+      "id": "item_4",
+      "ownerId": "user_3",
+      "ownerName": "Priya Patel",
+      "ownerAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "title": "H&M Floral Chiffon Tiered Midi Dress",
+      "brand": "H&M",
+      "category": "Dresses",
+      "size": "S",
+      "condition": "Brand New with Tags",
+      "color": "Pastel Floral",
+      "estimatedValue": 1400,
+      "description": "Breezy tiered midi dress crafted in airy printed chiffon with V-neckline and gathered waist. Never worn, original store tags still attached. Ideal for brunches or summer outings.",
+      "images": [
+        "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Floral",
+        "Summer",
+        "H&M",
+        "MidiDress",
+        "BNWT"
+      ],
+      "location": "Bandra, Mumbai",
+      "status": "available",
+      "createdAt": "2026-10-03T09:40:00.000Z"
+    },
+    {
+      "id": "item_5",
+      "ownerId": "user_1",
+      "ownerName": "Rahul Sharma",
+      "ownerAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "title": "Adidas Originals Gazelle Suede Sneakers",
+      "brand": "Adidas",
+      "category": "Shoes",
+      "size": "L",
+      "condition": "Gently Used",
+      "color": "Black / White",
+      "estimatedValue": 2600,
+      "description": "Iconic low-profile sneaker with soft suede upper and white serrated 3-Stripes. Clean rubber outsole with very light tread wear. Cleaned and sanitized, comes with original laces.",
+      "images": [
+        "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Adidas",
+        "Sneakers",
+        "Gazelle",
+        "Footwear",
+        "Retro"
+      ],
+      "location": "Indiranagar, Bengaluru",
+      "status": "available",
+      "createdAt": "2026-09-25T16:15:00.000Z"
+    },
+    {
+      "id": "item_6",
+      "ownerId": "user_3",
+      "ownerName": "Priya Patel",
+      "ownerAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "title": "Uniqlo Ultra Light Down Compact Jacket",
+      "brand": "Uniqlo",
+      "category": "Jackets & Outerwear",
+      "size": "M",
+      "condition": "Like New",
+      "color": "Midnight Navy",
+      "estimatedValue": 2400,
+      "description": "Feather-light down insulation with water-repellent coating. Folds down into its included compact carrying pouch. Extremely warm for its weight, ideal for travel or winter layering.",
+      "images": [
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80"
+      ],
+      "tags": [
+        "Uniqlo",
+        "DownJacket",
+        "WinterWear",
+        "Ultralight",
+        "Outerwear"
+      ],
+      "location": "Bandra, Mumbai",
+      "status": "available",
+      "createdAt": "2026-09-30T12:00:00.000Z"
+    }
+  ],
+  "swaps": [
+    {
+      "id": "swap_1791619337218",
+      "requesterId": "user_1791619336844",
+      "recipientId": "user_2",
+      "requestedItemId": "item_1791619337210",
+      "offeredItemId": "item_1791619337081",
+      "offeredItemIds": [
+        "item_1791619337081"
+      ],
+      "status": "completed",
+      "aiFairnessAssessment": {
+        "verdict": "Unbalanced",
+        "score": 55,
+        "differenceAmount": 1700,
+        "analysisText": "Significant surplus value (+₹1700). Your offered garments substantially exceed the requested Zara.",
+        "recommendation": "Consider offering a single lower-tier item instead to avoid over-trading your wardrobe.",
+        "isBundle": false,
+        "totalOfferedValue": 3500,
+        "requestedValue": 1800
+      },
+      "message": "Hello Ananya, would love to trade this jacket!",
+      "counterofferHistory": [],
+      "createdAt": "2026-10-10T08:02:17.218Z",
+      "updatedAt": "2026-10-10T08:02:17.252Z"
+    },
+    {
+      "id": "swap_1791607451809",
+      "requesterId": "user_1791607451441",
+      "recipientId": "user_2",
+      "requestedItemId": "item_2",
+      "offeredItemId": "item_1791607451779",
+      "offeredItemIds": [
+        "item_1791607451779"
+      ],
+      "status": "completed",
+      "aiFairnessAssessment": {
+        "verdict": "Unbalanced",
+        "score": 55,
+        "differenceAmount": 1750,
+        "analysisText": "Significant surplus value (+₹1750). Your offered garments substantially exceed the requested Zara.",
+        "recommendation": "Consider offering a single lower-tier item instead to avoid over-trading your wardrobe.",
+        "isBundle": false,
+        "totalOfferedValue": 3500,
+        "requestedValue": 1750
+      },
+      "message": "Hello Ananya, would love to trade this jacket!",
+      "counterofferHistory": [],
+      "createdAt": "2026-10-10T04:44:11.809Z",
+      "updatedAt": "2026-10-10T04:44:12.031Z"
+    },
+    {
+      "id": "swap_1",
+      "requesterId": "user_1",
+      "recipientId": "user_2",
+      "offeredItemId": "item_1",
+      "offeredItemIds": [
+        "item_1"
+      ],
+      "requestedItemId": "item_2",
+      "status": "pending",
+      "aiFairnessAssessment": {
+        "verdict": "Fair Swap",
+        "score": 94,
+        "differenceAmount": 150,
+        "analysisText": "Both items are from popular high-street and sportswear brands with high desirability. Estimated values are ₹1,600 and ₹1,750—a negligible difference of ₹150. The swap is balanced and mutually advantageous.",
+        "recommendation": "Direct 1-to-1 swap is highly recommended without additional adjustments."
+      },
+      "message": "Hey Ananya! Loved your Zara denim jacket. Would you like to swap with my Nike Club Fleece Hoodie?",
+      "counterofferHistory": [],
+      "createdAt": "2026-10-04T10:30:00.000Z",
+      "updatedAt": "2026-10-04T10:30:00.000Z"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv_swap_1791619337218",
+      "swapId": "swap_1791619337218",
+      "participants": [
+        "user_1791619336844",
+        "user_2"
+      ],
+      "messages": [
+        {
+          "id": "msg_1791619337223",
+          "senderId": "system",
+          "senderName": "Loopwear AI Assistant",
+          "text": "Swap proposal initiated: [Vintage Leather Biker Jacket] for [Zara Silk Blouse 1791619337207]. AI assessment: Unbalanced (Consider offering a single lower-tier item instead to avoid over-trading your wardrobe.)",
+          "timestamp": "2026-10-10T08:02:17.223Z",
+          "read": true
+        },
+        {
+          "id": "msg_1791619337226",
+          "senderId": "user_1791619336844",
+          "senderName": "Test Swapper",
+          "text": "Hello Ananya, would love to trade this jacket!",
+          "timestamp": "2026-10-10T08:02:17.226Z",
+          "read": false
+        },
+        {
+          "id": "msg_1791619337245",
+          "senderId": "system",
+          "senderName": "Loopwear System",
+          "text": "🎉 Swap proposal accepted! Both items are now reserved. You can coordinate handover details in this chat and mark the exchange completed when done.",
+          "timestamp": "2026-10-10T08:02:17.245Z",
+          "read": false
+        },
+        {
+          "id": "msg_1791619337356",
+          "senderId": "system",
+          "senderName": "Loopwear Sustainability Engine",
+          "text": "🌿 Swap successfully completed! Together, you prevented 2 garments from reaching landfills, saving ~7.0 kg of CO2 and ~3,600 liters of water!",
+          "timestamp": "2026-10-10T08:02:17.356Z",
+          "read": false
+        },
+        {
+          "id": "msg_1791619337363",
+          "senderId": "user_2",
+          "senderName": "Ananya Verma",
+          "text": "Thank you for the wonderful trade!",
+          "timestamp": "2026-10-10T08:02:17.363Z",
+          "read": false
+        }
+      ],
+      "createdAt": "2026-10-10T08:02:17.223Z"
+    },
+    {
+      "id": "conv_swap_1791607451809",
+      "swapId": "swap_1791607451809",
+      "participants": [
+        "user_1791607451441",
+        "user_2"
+      ],
+      "messages": [
+        {
+          "id": "msg_1791607451812",
+          "senderId": "system",
+          "senderName": "Loopwear AI Assistant",
+          "text": "Swap proposal initiated: [Vintage Leather Biker Jacket] for [Zara Vintage Wash Denim Trucker Jacket]. AI assessment: Unbalanced (Consider offering a single lower-tier item instead to avoid over-trading your wardrobe.)",
+          "timestamp": "2026-10-10T04:44:11.812Z",
+          "read": true
+        },
+        {
+          "id": "msg_1791607451817",
+          "senderId": "user_1791607451441",
+          "senderName": "Test Swapper",
+          "text": "Hello Ananya, would love to trade this jacket!",
+          "timestamp": "2026-10-10T04:44:11.817Z",
+          "read": false
+        },
+        {
+          "id": "msg_1791607452017",
+          "senderId": "system",
+          "senderName": "Loopwear System",
+          "text": "🎉 Swap proposal accepted! Both items are now reserved. You can coordinate handover details in this chat and mark the exchange completed when done.",
+          "timestamp": "2026-10-10T04:44:12.017Z",
+          "read": false
+        },
+        {
+          "id": "msg_1791607452200",
+          "senderId": "system",
+          "senderName": "Loopwear Sustainability Engine",
+          "text": "🌿 Swap successfully completed! Together, you prevented 2 garments from reaching landfills, saving ~7.0 kg of CO2 and ~3,600 liters of water!",
+          "timestamp": "2026-10-10T04:44:12.200Z",
+          "read": false
+        },
+        {
+          "id": "msg_1791607452215",
+          "senderId": "user_2",
+          "senderName": "Ananya Verma",
+          "text": "Thank you for the wonderful trade!",
+          "timestamp": "2026-10-10T04:44:12.215Z",
+          "read": false
+        }
+      ],
+      "createdAt": "2026-10-10T04:44:11.812Z"
+    },
+    {
+      "id": "conv_swap_1",
+      "swapId": "swap_1",
+      "participants": [
+        "user_1",
+        "user_2"
+      ],
+      "messages": [
+        {
+          "id": "msg_1",
+          "senderId": "user_1",
+          "senderName": "Rahul Sharma",
+          "text": "Hey Ananya! Loved your Zara denim jacket. Would you be interested in swapping for my Nike Club Fleece Hoodie?",
+          "timestamp": "2026-10-04T10:32:00.000Z",
+          "read": true
+        },
+        {
+          "id": "msg_2",
+          "senderId": "user_2",
+          "senderName": "Ananya Verma",
+          "text": "Hi Rahul! That's a great hoodie. The AI Fair Swap assessment says our items are within ₹150 of each other. Sounds like a fair trade to me!",
+          "timestamp": "2026-10-04T11:05:00.000Z",
+          "read": true
+        }
+      ],
+      "createdAt": "2026-10-04T10:30:00.000Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep_1",
+      "reporterId": "user_1",
+      "targetType": "item",
+      "targetId": "item_4",
+      "reason": "Incorrect condition tag listed initially (now resolved).",
+      "status": "resolved",
+      "notes": "Reviewed by admin. Listing is authentic.",
+      "createdAt": "2026-10-05T09:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit_1",
+      "adminId": "user_admin",
+      "action": "SYSTEM_INIT",
+      "target": "DATABASE",
+      "details": "Initialized seed data with sustainable clothing items and sample users.",
+      "timestamp": "2026-10-01T00:00:00.000Z"
+    }
+  ]
+}
